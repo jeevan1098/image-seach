@@ -34,13 +34,13 @@ const App = () => {
     if (searchTerm) {
       fetchImages(true);
     }
-  }, [searchTerm]);
+  }, [searchTerm, fetchImages]);
 
   useEffect(() => {
     if (page > 1) {
       fetchImages();
     }
-  }, [page]);
+  }, [page, fetchImages]);
 
   const handleSearch = (e) => {
     e.preventDefault();
